@@ -4,25 +4,6 @@ public class SumarCifras {
 	
 	public int sumarCifras(int numero) {	
 		int suma = 0;
-		
-		if(numero < 10) {
-			return numero;
-		}
-		
-		String s_numero = Integer.toString(numero);
-		
-		for(int i = 0; i < s_numero.length(); i++) {
-			suma += Character.getNumericValue(s_numero.charAt(i));
-		}
-		
-		return sumarCifras(suma);
-	}
-	
-	
-/*  // RESOLUCIÓN DEL PROFESOR
-
-	private int sumarCifrasMetodo1(int numero) {
-		int suma = 0;
 		int cantidadDeCifras = contarCantidadDeCifras(numero);
 		
 		if(numero < 10) {
@@ -33,12 +14,11 @@ public class SumarCifras {
 		}
 		return sumarCifras(suma);
 	}
-
+	
 	private int contarCantidadDeCifras(int numero) {
 		int cantidadDeCifras = Integer.toString(numero).length();
 		return cantidadDeCifras;
 	}
-*/
 	
 	public static void main(String[] args) {
 		
