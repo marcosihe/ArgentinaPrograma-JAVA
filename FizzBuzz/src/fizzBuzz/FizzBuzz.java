@@ -1,10 +1,10 @@
 package fizzBuzz;
 
-public class Main {
-
-	public static void main(String[] args) {
+public class FizzBuzz {
+	
+	public static void fizzBuzz (int num1, int num2) {
 		String output = "";
-		int num1 = 3, num2 = 5, i = 1;
+		int i = 1;
 		int n = 100;
 		while(i <= n) {
 			if(i % num1 == 0) { output += "Fizz"; }
@@ -14,5 +14,9 @@ public class Main {
 			output = "";
 			i++;
 		}
+	}
+
+	public static void main(String[] args) {
+		fizzBuzz(3,5);
 	}
 }
