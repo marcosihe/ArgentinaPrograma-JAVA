@@ -8,8 +8,6 @@ public class CircleService {
 		// Empty constructor method
 	}
 	
-	// Define methods
-	
 	public double findDistance(Coordinates centerOne, Coordinates centerTwo) {
 		return Math.sqrt((Math.pow( centerOne.getX() - centerTwo.getX() ,2)) + (Math.pow( centerOne.getY() - centerTwo.getY() ,2)));
 	}
@@ -19,12 +17,20 @@ public class CircleService {
 	}
 	
 	public boolean hasIntersection(Circle circleOne, Circle circleTwo) {
-		//boolean result = false;
-		if(findDistance(circleOne.getCenter(), circleTwo.getCenter()) <= sumRadius(circleOne.getRadius(), circleTwo.getRadius())) {
-			return true;
-		}else {
-			return false;
-		}
+		return (findDistance(circleOne.getCenter(), circleTwo.getCenter()) <= sumRadius(circleOne.getRadius(), circleTwo.getRadius()));
+		
 	}
+	
+	public static void main(String[] args) {
+		CircleService circleService = new CircleService();
+		
+		Coordinates centerOne = new Coordinates(1,1);
+		Circle circleOne = new Circle(centerOne, 8);
+		
+		Coordinates centerTwo = new Coordinates(1,1);
+		Circle circleTwo = new Circle(centerTwo, 5);
+		
+		System.out.println("Intersection?: " + circleService.hasIntersection(circleOne, circleTwo));
 
+	}
 }
