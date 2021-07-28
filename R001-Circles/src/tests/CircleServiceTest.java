@@ -62,6 +62,4 @@ public class CircleServiceTest {
 		Circle circleTwo = new Circle(centerTwo, 3);
 		assertTrue(circleService.hasIntersection(circleOne, circleTwo));
 	}
-	
-	
 }
