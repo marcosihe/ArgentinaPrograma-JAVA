@@ -25,7 +25,7 @@ public class Cuenta {
 	}
 
 	public void setCBU(long cBU) {
-		CBU = cBU;
+		this.CBU = cBU;
 	}
 
 	public int getDNI() {
@@ -33,7 +33,9 @@ public class Cuenta {
 	}
 
 	public void setDNI(int dNI) {
-		DNI = dNI;
+		if(dNI < 0)
+			throw new Error("El DNI ingresado no es válido");
+		this.DNI = dNI;
 	}
 
 	public double getSaldo() {
@@ -41,6 +43,8 @@ public class Cuenta {
 	}
 
 	public void setSaldo(double saldo) {
+		if(saldo < 0)
+			throw new Error("No se admiten cantidades negativas de dinero");
 		this.saldo = saldo;
 	}
 	
