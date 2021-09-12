@@ -10,4 +10,6 @@
     <fullyQualifiedTypeName name="tarjetaBaja.TarjetaBaja"/>
     <fullyQualifiedTypeName name="cuentas.Cuenta"/>
     <fullyQualifiedTypeName name="cuentas.CuentaService"/>
+    <fullyQualifiedTypeName name="sumo.PreTorneo"/>
+    <fullyQualifiedTypeName name="sumo.Luchador"/>
 </qualifiedTypeNameHistroy>
